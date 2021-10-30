@@ -1,5 +1,7 @@
 # The Farmacy Family Architectural Kata by O'Reilly
 
+Welcome to the Farmacy Family Architectural Kata run by [O'Reilly](https://www.oreilly.com/) in October - November 2021. This is an architectural documentation for the solution proposal from Sever Crew.
+
 ## Contents
 - [Welcome words](#welcome_words)  
     - [About the team](#about_the_team)
@@ -24,10 +26,7 @@
 - [Architecture design records](#adrs)
 - [Additional resources](#additional_resources)
 
-## Welcome words <a name="welcome_words"></a>
-Welcome to the Farmacy Family Architectural Kata run by [O'Reilly](https://www.oreilly.com/) in October - November 2021. This is an architectural documentation for the solution proposal from Sever Crew.
-
-### About the team <a name="about_the_team"></a>
+## About the team <a name="about_the_team"></a>
 Our team is a group of friends from the IT department of a vertically integrated steel and steel-related mining company [Severstal](https://www.severstal.com/eng/). We are all passionate about software design and development.
 
 * [Oleg Krasnov](https://www.linkedin.com/in/oleg-krasnov/) 
