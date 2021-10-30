@@ -6,28 +6,28 @@
 - [Overview](#overview)  
 - [Baseline Architecture](#baseline-architecture)  
     - [Context](#baseline_context)
-    - [Containers](#containers)
+    - [Containers](#baseline_containers)
 - [Initial requirements](#initial-requirements)  
     - [Primary goals](#primary_goals)
     - [User requirements](#user_requirements)
     - [Stakeholders](#stakeholders)
     - [Constraints](#constraints)
     - [User stories](#user_stories)
-- [Target Architecture](#target_architecture)
+- [Target Architecture](#target-architecture)
     - [Context](#target_context)
     - [Containers](#target_containers)
     - [Assumptions](#assumptions)
-    - [Significant Quality Attributes](#significant_quality_attributes)
+    - [Significant Quality Attributes](#quality_attributes)
     - [Deployment](#deployment)
     - [Risks](#risks)
     - [Security](#security)
-- [Architecture design records](#Architecture-design-records)
+- [Architecture design records](#adrs)
 - [Additional resources](#additional_resources)
 
-## Welcome words
+## Welcome words <a name="welcome-words"></a>
 Welcome to the Farmacy Family Architectural Kata run by [O'Reilly](https://www.oreilly.com/) in October - November 2021. This is an architectural documentation for the solution proposal from Sever Crew.
 
-### About the team
+### About the team <a name="about-the-team"></a>
 Our team is a group of friends from the IT department of a vertically integrated steel and steel-related mining company [Severstal](https://www.severstal.com/eng/). We are all passionate about software design and development.
 
 * [Oleg Krasnov](https://www.linkedin.com/in/oleg-krasnov/) 
@@ -37,12 +37,12 @@ Our team is a group of friends from the IT department of a vertically integrated
 * [Petr Mironov](https://www.linkedin.com/in/%D0%BF%D0%B5%D1%82%D1%80-%D0%BC%D0%B8%D1%80%D0%BE%D0%BD%D0%BE%D0%B2-93ba92209/) 
 
 
-## Overview
+## Overview <a name="overview"></a>
 Farmacy Food is a tech-enabled healthy food startup that takes the “Let food be thy medicine” quote literally and creates tasty meals around peoples’ dietary needs and active lifestyles to support their overall well-being. Our mission is to make health and wellness radically affordable and accessible.
 
 Founder: Kwaku Ose
 
-## Baseline architecture
+## Baseline architecture <a name="baseline-architecture"></a>
 This is an actual FFood (designed by Arch Collider from the first Kata exercise - [ldynia/archcolider: O'Reilly's first Software Architectural Katas (github.com)](https://github.com/ldynia/archcolider)) system architecture. The customer interacts with Farmacy Food through well designed touch-points. 
 
 Those are the:
@@ -56,16 +56,16 @@ The system context diagram below depicted key users of the system and its extern
 
 ![baseline_architecture_context](images/baseline_architecture_context.jpg)
 
-### Containers
+### Containers <a name="baseline_containers"></a>
 The containers diagram shows the mid-level view of software design and how the containers communicate with one another in baseline architecture.
 ![baseline_architecture_container](images/baseline_architecture_container.jpg)
 
-## Initial requirements
+## Initial requirements <a name="initial-requirements"></a>
 Farmacy Family will be an enhancement of the existing Farmacy Foods system that adds tighter engagement with their customers. 
 
 When a customer of Farmacy Food purchases a meal, the Farmacy Family will involve him into a community of people with the same perception of healthy eating and offer additional benefits for becoming an engaged customer.
  
- ### Primary goals
+ ### Primary goals <a name="primary_goals"></a>
 The Product Owner establishes the following business goals:
 * Develop relationships between engaged customers and nurture those relationships
 * Convert transactional customers to engaged customers
@@ -75,7 +75,7 @@ The Product Owner establishes the following business goals:
 * Increase partnership programs with clinics and dieticians
 
 
-### User requirements
+### User requirements <a name="user_requirements"></a>
 There are some key requirements described by Product Owner: 
 * Hundreds of transactional customers, separated by distinct geographic zones. 
 * Additionally, different clusters of customers frequently consolidate around similar dietary requirements.
@@ -98,7 +98,7 @@ There are several engagement models:
 
 Also, there are some additional information received during the [question and answer](#heading=h.h39gq0scu1hg) session.
 
-### Stakeholders
+### Stakeholders <a name="stakeholders"></a>
 
 This section describes key stakeholders and their concerns:
 * **SH-1:** Farmacy Family users (engaged customers)
@@ -135,7 +135,7 @@ This section describes key stakeholders and their concerns:
     * Easy of managing blogs, forums, group chats, etc
 * **SH-12:** Food Supplier
 
-### Constraints
+### Constraints <a name="constraints"></a>
 Below listed global constraints for the solution that drives all trade-off decisions:
 * **CON-1:** The new system must seamlessly incorporate into Farmacy Foods
 * **CON-2:** Add Farmacy Family user interface to existing Foods interface, which is currently a Reactive monolith. Create a holistic UX for both food and Farmacy Family to support engagement model
@@ -144,7 +144,7 @@ Below listed global constraints for the solution that drives all trade-off decis
 * **CON-5:** USA is the target geographic area
 * **CON-6:** About medical profiles laws
 
-### User stories
+### User stories <a name="user_stories"></a>
 **Profile**
 * **US-1.1:** As a User I want to manage and restrict profile data and community should see only allowed by me information
 * **US-1.2:** As a Client I want to be sure that doctors profile has been confirmed with necessary official documents and I should be informed that I will get a quality consultation
@@ -203,7 +203,7 @@ Below listed global constraints for the solution that drives all trade-off decis
 * **US-7.1:** As a Product Owner I want to negotiate a partnership with clinics in order to interact effectively
 * **US-7.2:** As a Product Owner I want to make an order from Farmacy Family in order not to go to another site
 
-## Target Architecture 
+## Target Architecture <a name="target_architecture"></a>
 Here you find the documentation of the software architecture that we envision to address Farmacy Family's user requirements.
 
 We distilled several key functional areas of Farmacy Family System:
@@ -219,12 +219,12 @@ We distilled several key functional areas of Farmacy Family System:
 
 Based on [primary goals](#heading=h.ny3x2fqa6o1w), [constraints](#heading=h.vp7c45p00ffx) and formalized [user stories](#heading=h.hnr67x3ca6qb), we extracted the following architecture views of Farmacy Family system design seen below. These views provide a contextual perspective of the system, showing mid-level building blocks and connectors which altogether correspond to the main capabilities provided by the Farmacy Family system.
 
-### Context
+### Context <a name="target_context"></a>
 There's a context diagram that gives an overview of the external elements that interact with what we called the Farmacy Family System, which is the scope of this software architecture.
 
 ![target_architecture_context](images/target_architecture_context.jpg "target architecture context")
 
-### Containers
+### Containers <a name="target_containers"></a>
 The containers diagram shows the mid-level viewpoint of the software architecture and how containers communicate with one another and with external services.
 
 ![target_architecture_containers](images/target_architecture_containers.jpg "target architecture containers")
@@ -250,7 +250,7 @@ We also could reuse some Farmacy Foods services:
 * **S3 Storage** - central data storage
 * **Notification Module** - for sending SMS, emails and Push notifications.
 
-### Assumptions
+### Assumptions <a name="assumptions"></a>
 We define several assumptions as knowledge taken for granted or accepted as true without evidence. 
 * **ASM-1:** We assume that we have access to Machine Learning expertise
 * **ASM-2:** Development team is relatively small, and the proposed solution should enable fast time-to-market and ease of changes
@@ -270,7 +270,7 @@ And also tried to identify some metrics based on some market research:
 * 5-10 webinars per month per user
 
 
-### Significant Quality Attributes
+### Significant Quality Attributes <a name="quality_attributes"></a>
 The target  architecture must support goals, user scenarios and constraints described above while satisfying the quality attributes listed in this section. There are some global quality attributes and also there are several individual QAs for certain parts of the system.
 
 **Global**
@@ -312,7 +312,7 @@ The target  architecture must support goals, user scenarios and constraints desc
 * **QA-12:** Modifiability
     * We need a powerful but easy-to-use toolkit for creating and modifying ML models on-demand.
 
-### Deployment
+### Deployment <a name="deployment"></a>
 The deployment diagram illustrates how the system containers are mapped to the AWS infrastructure:
 
 ![deployment](images/deployment.png "deployment")
@@ -333,7 +333,7 @@ We have prepared a list of all the necessary [services](#heading=h.nklg55vd2y60)
 
 The [Multi-zone approach](#heading=h.q1f5im44emch) will be used to allow redundancy of critical data and high availability on the next step of the project.
 
-### Risks
+### Risks <a name="risks"></a>
 
 These are the possible business and technical risks which we tried to highlight below.
 
@@ -358,7 +358,7 @@ These are the possible business and technical risks which we tried to highlight 
 * **TR-3:** With an increase in the number of users, Community Admin will not be enough to track banned content.
 * **TR-4:** Attackers can hack our system and steal sensitive data (see [Security](#heading=h.tl2pg3y9nhmp)).
 
-### Security
+### Security <a name="security"></a>
 
 To avoid some risks of system hacking or data theft we suggest to maintains security with the following solutions:
 
@@ -389,7 +389,7 @@ For additional information see [ADR-6](#heading=h.gd6y1zwbco5p)
 **Third party auditing**
 We should be regularly audited by third party penetration testers to ensure we’re meeting compliance standards. 
 
-# Architecture design records
+# Architecture design records <a name="adrs"></a>
 - [ADR-1](adrs/ADR-1:%20Architecture%20design%20record%20style.md) Architecture design record style
 - [ADR-2](adrs/ADR-2:%20Service-based%20architecture%20style%20approach.md) Service-based architecture style approach
 - [ADR-3](adrs/ADR-3:%20Social%20network%20capabilities.md) Social network capabilities
@@ -400,7 +400,7 @@ We should be regularly audited by third party penetration testers to ensure we�
 - [ADR-9](adrs/ADR-9:%20Inventory%20Replenishment%20Module.md) Inventory Replenishment Module
 - [ADR-10](adrs/ADR-10:%20Cloud%20provider.md) Cloud provider
 
-# Additional resources
+# Additional resources <a name="additional_resources"></a>
 
 ### Extra requirements based on Q&As
 We have got some additional information during our [Question and Answers](pages/question_and_answers.md)  session with the Product Owner.
