@@ -14,7 +14,6 @@
     - [Architecture Characteristics Requirements](#architecture-characteristics-requirements)
     - [Constraints](#constraints)
     - [Assumptions](#assumptions)
-
 - [Target Architecture](#target-architecture)  
     - [Use Case Model](#use-case-model)  
     - [System Context](#system-context)  
@@ -53,6 +52,7 @@ Those are the:
 
 ### Context
 The system context diagram below depicted key users of the system and its external dependencies:
+
 ![baseline_architecture_context](images/baseline_architecture_context.jpg)
 
 ### Containers
