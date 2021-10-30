@@ -1,6 +1,6 @@
 # The Farmacy Family Architectural Kata by O'Reilly
 
-Welcome to the Farmacy Family Architectural Kata run by [O'Reilly](https://www.oreilly.com/) in October - November 2021. This is an architectural documentation for the solution proposal from Sever Crew.
+Welcome to the Farmacy Family Architectural Kata run by [O'Reilly](https://www.oreilly.com/) in October - November 2021. This is an architectural documentation for the solution proposal from Sever Crew team.
 
 ## Contents
 - [About the team](#about_the_team)
