@@ -20,7 +20,7 @@ We have got some additional information during our Question and Answer session w
 
 * **Do we need to worry about CDN to have static content delivered sooner?** - It's not about requirements
 
-**What is the IT department of the pharmacy foods?** - It’s a startup
+* **What is the IT department of the pharmacy foods?** - It’s a startup
 
 * **There are existing platforms that solve discussions/content/media staff well. Does FFo have a preference for build vs use existing solutions on that front? And why?** - We can't wait for your proposal. If you could find a solution with enough capabilities and integration points, it would be great.
 

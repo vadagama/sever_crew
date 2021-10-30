@@ -1,27 +1,28 @@
 # The Farmacy Family Architectural Kata by O'Reilly
 
 ## Contents
-
-- [Welcome](#welcome)  
+- [Welcome words](#welcome-words)  
     - [About the team](#about-the-team)
 - [Overview](#overview)  
 - [Baseline Architecture](#baseline-architecture)  
-    - [Context](#context)
+    - [Context](#baseline_context)
     - [Containers](#containers)
 - [Initial requirements](#initial-requirements)  
-- [System Requirements](#system-requirements)  
-    - [Functional Requirements](#functional-requirements)
-    - [Architecture Characteristics Requirements](#architecture-characteristics-requirements)
+    - [Primary goals](#primary_goals)
+    - [User requirements](#user_requirements)
+    - [Stakeholders](#stakeholders)
     - [Constraints](#constraints)
+    - [User stories](#user_stories)
+- [Target Architecture](#target_architecture)
+    - [Context](#target_context)
+    - [Containers](#target_containers)
     - [Assumptions](#assumptions)
-- [Target Architecture](#target-architecture)  
-    - [Use Case Model](#use-case-model)  
-    - [System Context](#system-context)  
-    - [Containers](#containers)  
-    - [Process Views](#process-views)  
-    - [Deployment](#deployment)  
-- [Transition Architecture](#transition-architecture)
-- [Architecture Decision Records](#architecture-decision-records)
+    - [Significant Quality Attributes](#significant_quality_attributes)
+    - [Deployment](#deployment)
+    - [Risks](#risks)
+    - [Security](#security)
+- [Architecture design records](#Architecture-design-records)
+- [Additional resources](#additional_resources)
 
 ## Welcome words
 Welcome to the Farmacy Family Architectural Kata run by [O'Reilly](https://www.oreilly.com/) in October - November 2021. This is an architectural documentation for the solution proposal from Sever Crew.
@@ -50,7 +51,7 @@ Those are the:
 * Point of Sales - sell our product but have an employee handle the transactions through a point of sale.
 
 
-### Context
+### Context <a name="baseline_context"></a>
 The system context diagram below depicted key users of the system and its external dependencies:
 
 ![baseline_architecture_context](images/baseline_architecture_context.jpg)
@@ -98,6 +99,7 @@ There are several engagement models:
 Also, there are some additional information received during the [question and answer](#heading=h.h39gq0scu1hg) session.
 
 ### Stakeholders
+
 This section describes key stakeholders and their concerns:
 * **SH-1:** Farmacy Family users (engaged customers)
     * Clear and simple user interface
@@ -268,7 +270,7 @@ And also tried to identify some metrics based on some market research:
 * 5-10 webinars per month per user
 
 
-### Significant Quality Attributes{#my-label}
+### Significant Quality Attributes
 The target  architecture must support goals, user scenarios and constraints described above while satisfying the quality attributes listed in this section. There are some global quality attributes and also there are several individual QAs for certain parts of the system.
 
 **Global**
