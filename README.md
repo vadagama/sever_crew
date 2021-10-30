@@ -418,6 +418,8 @@ We have got some additional information during our [Question and Answers](pages/
 * **HIPAA** - US Health Insurance Portability and Accountability Act
 
 ### Links
+* Kata Board in Miro: [miro.com](https://miro.com/app/board/o9J_lp0sOG0=/) 
+* Document in PDF Format: [download](docs/farmacy_family_arch_kata.pdf) 
 * O’reilly architectural katas: [Architectural Katas](https://learning.oreilly.com/live-training/courses/architectural-katas/0636920458463/)
 * Information about ADRs: [adr.github.io](https://adr.github.io/)
 * Training and resources about software architecture: [developertoarchitect.com](https://www.developertoarchitect.com/)
