@@ -10,7 +10,7 @@ Proposed
 Based on the requirements provided by Product Owner we need to incorporate new functionality (profile, blogs, webinars, etc) into Family Food mobile and web applications. 
 
 ### Decision:
-Based on our assumptions about technological stack (see **ASM-6 **and** ASM-7**), we propose to refactor existing iOS and Android App and append such Farmacy Family functionality as p2p and group chats, user profile, community spaces and forums, dietitian feeds. We offer you to add only necessary functions for the mobile version and full functionality for the web version.
+Based on our assumptions about technological stack (see ASM-6 and ASM-7), we propose to refactor existing iOS and Android App and append such Farmacy Family functionality as p2p and group chats, user profile, community spaces and forums, dietitian feeds. We offer you to add only necessary functions for the mobile version and full functionality for the web version.
 
 We don't recommend to use web oriented approaches like Cordova for such mobile applications because of the following considerations:
 

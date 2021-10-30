@@ -21,4 +21,4 @@ So, there are no reasons not to deploy our solutions to Amazon Web Services clou
 * We are getting cost-efficient and stable infrastructure platform with ability to scale
 * New development and delivery pipelines will be setup for new services
 
-For deployment view look [deployment](#heading=h.1lcn3p400er6) chapter.
+For deployment view see deployment diagram.

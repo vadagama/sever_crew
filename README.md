@@ -218,6 +218,8 @@ We distilled several key functional areas of Farmacy Family System:
 
 Based on [primary goals](#primary_goals), [constraints](#constraints) and formalized [user stories](#user_stories), we extracted the following architecture views of Farmacy Family system design seen below. These views provide a contextual perspective of the system, showing mid-level building blocks and connectors which altogether correspond to the main capabilities provided by the Farmacy Family system.
 
+We also investigated how UIs of the Farmacy Family might look like and develop several [UI prototypes](pages/ui.md) of web and mobile client applications.
+
 ### Context <a name="target_context"></a>
 There's a context diagram that gives an overview of the external elements that interact with what we called the Farmacy Family System, which is the scope of this software architecture.
 
@@ -421,3 +423,5 @@ We have prepared several UI prototypes for the iOS mobile app.
 
 ### Links
 * O’reilly architectural katas: [Architectural Katas](https://learning.oreilly.com/live-training/courses/architectural-katas/0636920458463/)
+* Information about ADRs: [adr.github.io](https://adr.github.io/)
+* Training and resources about software architecture: [developertoarchitect.com](https://www.developertoarchitect.com/)

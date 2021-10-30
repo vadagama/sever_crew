@@ -18,15 +18,15 @@ This monolith structure is however causing the following business impact:
 We believe that the functionality of the Farmacy Family system is more fragmented, but using a microservice approach is not advisable.
 
 ### Decision:
-We see that different parts of the Farmacy Family system have different architectural requirements ([quality attributes](../#significant_quality_attributes)).
+We see that different parts of the Farmacy Family system have different architectural requirements (quality attributes).
 
 
 
-* The customer interacts with unified for Farmacy Food and Farmacy Family web and mobile applications also with web conferencing module UI (incorporated in main apps with APIs). These parts have to be usable and changeable to avoid customer frustration (see [QA-5](../#significant_quality_attributes) and [QA-5](../#significant_quality_attributes)).
+* The customer interacts with unified for Farmacy Food and Farmacy Family web and mobile applications also with web conferencing module UI (incorporated in main apps with APIs). These parts have to be usable and changeable to avoid customer frustration (see QA-5 and QA-5)).
 * Another significant part of our system is the Social Network Module. It contains a lot of components which should be closely related to each other and it could be hard to maintain this with a microservice approach.
-* Third part of our system is the Customer profile Module. It must be secure (see [QA-4](../#significant_quality_attributes)).
-* Webinars Module should be usable and productive and we suppose not to infest in development in that case (You can read our arguments [ADR-4: Webinars capability](ADR-4:%20webinars%20capability.md) )
-* And finally we need eDietician Module, Inventory Replenishment Module and Analysis of Service Level Module. These modules are based on AI mechanics and should be modifiable and secure as well (see [QA-10](../README.mdREADME.md#significant_quality_attributes)).
+* Third part of our system is the Customer profile Module. It must be secure (see QA-4).
+* Webinars Module should be usable and productive and we suppose not to infest in development in that case (You can read our arguments in ADR-4: Webinars capability)
+* And finally we need eDietician Module, Inventory Replenishment Module and Analysis of Service Level Module. These modules are based on AI mechanics and should be modifiable and secure as well (see QA-10 and QA-11).
 
 This makes it clear that we need to break the monolith. The communication between these modules needs to be both synchronous and asynchronous.
 
