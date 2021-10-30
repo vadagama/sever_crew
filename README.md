@@ -1,19 +1,19 @@
 # The Farmacy Family Architectural Kata by O'Reilly
 
 ## Contents
-- [Welcome words](#welcome-words)  
-    - [About the team](#about-the-team)
+- [Welcome words](#welcome_words)  
+    - [About the team](#about_the_team)
 - [Overview](#overview)  
-- [Baseline Architecture](#baseline-architecture)  
+- [Baseline Architecture](#baseline_architecture)  
     - [Context](#baseline_context)
     - [Containers](#baseline_containers)
-- [Initial requirements](#initial-requirements)  
+- [Initial requirements](#initial_requirements)  
     - [Primary goals](#primary_goals)
     - [User requirements](#user_requirements)
     - [Stakeholders](#stakeholders)
     - [Constraints](#constraints)
     - [User stories](#user_stories)
-- [Target Architecture](#target-architecture)
+- [Target Architecture](#target_architecture)
     - [Context](#target_context)
     - [Containers](#target_containers)
     - [Assumptions](#assumptions)
@@ -24,10 +24,10 @@
 - [Architecture design records](#adrs)
 - [Additional resources](#additional_resources)
 
-## Welcome words <a name="welcome-words"></a>
+## Welcome words <a name="welcome_words"></a>
 Welcome to the Farmacy Family Architectural Kata run by [O'Reilly](https://www.oreilly.com/) in October - November 2021. This is an architectural documentation for the solution proposal from Sever Crew.
 
-### About the team <a name="about-the-team"></a>
+### About the team <a name="about_the_team"></a>
 Our team is a group of friends from the IT department of a vertically integrated steel and steel-related mining company [Severstal](https://www.severstal.com/eng/). We are all passionate about software design and development.
 
 * [Oleg Krasnov](https://www.linkedin.com/in/oleg-krasnov/) 
@@ -42,7 +42,7 @@ Farmacy Food is a tech-enabled healthy food startup that takes the “Let food b
 
 Founder: Kwaku Ose
 
-## Baseline architecture <a name="baseline-architecture"></a>
+## Baseline architecture <a name="baseline_architecture"></a>
 This is an actual FFood (designed by Arch Collider from the first Kata exercise - [ldynia/archcolider: O'Reilly's first Software Architectural Katas (github.com)](https://github.com/ldynia/archcolider)) system architecture. The customer interacts with Farmacy Food through well designed touch-points. 
 
 Those are the:
@@ -60,7 +60,7 @@ The system context diagram below depicted key users of the system and its extern
 The containers diagram shows the mid-level view of software design and how the containers communicate with one another in baseline architecture.
 ![baseline_architecture_container](images/baseline_architecture_container.jpg)
 
-## Initial requirements <a name="initial-requirements"></a>
+## Initial requirements <a name="initial_requirements"></a>
 Farmacy Family will be an enhancement of the existing Farmacy Foods system that adds tighter engagement with their customers. 
 
 When a customer of Farmacy Food purchases a meal, the Farmacy Family will involve him into a community of people with the same perception of healthy eating and offer additional benefits for becoming an engaged customer.
