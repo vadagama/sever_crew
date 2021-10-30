@@ -406,9 +406,6 @@ We should be regularly audited by third party penetration testers to ensure weâ€
 ### Extra requirements based on Q&As
 We have got some additional information during our [Question and Answers](pages/question_and_answers.md)  session with the Product Owner.
 
-### User interface prototypes (mobile)
-We have prepared several UI prototypes for the iOS mobile app.
-
 ### Glossary
 * **FFoods** - Farmacy Foods
 * **FFamily** - Farmacy Family
