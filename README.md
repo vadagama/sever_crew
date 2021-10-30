@@ -3,8 +3,7 @@
 Welcome to the Farmacy Family Architectural Kata run by [O'Reilly](https://www.oreilly.com/) in October - November 2021. This is an architectural documentation for the solution proposal from Sever Crew.
 
 ## Contents
-- [Welcome words](#welcome_words)  
-    - [About the team](#about_the_team)
+- [About the team](#about_the_team)
 - [Overview](#overview)  
 - [Baseline Architecture](#baseline_architecture)  
     - [Context](#baseline_context)
