@@ -362,13 +362,13 @@ These are the possible business and technical risks which we tried to highlight 
 
 To avoid some risks of system hacking or data theft we suggest to maintains security with the following solutions:
 
-**Authentication and authorization**
+#### Authentication and authorization
 Amazon Cognito provides solutions to control access to AWS resources from mobile and web apps using common identity management standards including OpenID Connect, OAuth 2.0, and SAML 2.0. It also helps protect our application users from unauthorized access to their accounts using compromised credentials. 
 
-**Encryption**
+#### Encryption
 Our data will be encrypted with 256-bit Secure Socket Layer (SSL) technology, which applies whether you’re on a desktop, laptop, tablet, or phone. We use cryptographic keys to authenticate data.
 
-**AWS cloud features**
+#### AWS cloud features
 [AWS Cloud Compliance](http://aws.amazon.com/compliance) enables the controls in place at AWS to maintain security and data protection in the cloud. 
 
 The IT infrastructure that AWS designed and managed in alignment with variety of IT security standards. The following is a partial list of assurance programs with which AWS complies:
@@ -377,16 +377,16 @@ The IT infrastructure that AWS designed and managed in alignment with variety of
 * PCI DSS Level 1
 * ISO 9001, ISO 27001, ISO 27017, ISO 27018
 
--**Self-testing**
+#### Self-testing
 We are going to regularly run tests on our own software: scan our ports, test for SQL injection, and block cross-site scripting to ensure that all our security measures are working as they should be. ([https://github.com/Netflix/SimianArmy](https://github.com/Netflix/SimianArmy))
 
-**Private subnets**
+#### Private subnets
 We use private subnets for our instances to protect from being accessed directly from the internet. For more information see [Deployment](#deployment).
 
-**Customer authorisation form**
+#### Customer authorisation form
 For additional information see [ADR-6: Sensitive data access](adrs/ADR-6:%20Sensitive%20data%20access.md)
 
-**Third party auditing**
+#### Third party auditing
 We should be regularly audited by third party penetration testers to ensure we’re meeting compliance standards. 
 
 # Architecture design records <a name="adrs"></a>
