@@ -95,7 +95,7 @@ There are several engagement models:
 * **Dieticians** - Farmacy Foods supported generic advice from dieticians. Farmacy Family will support one-on-one advice for engaged customers based on regular contact via messages.
 * **Family Foods** - watching which Transactional Customers (and their information) are not part of Farmacy Family to start the onboarding process for those customers.
 
-Also, there are some additional information received during the [question and answer](#heading=h.h39gq0scu1hg) session.
+Also, there are some additional information received during the [question and answer](pages/question_and_answers.md) session.
 
 ### Stakeholders <a name="stakeholders"></a>
 
@@ -216,7 +216,7 @@ We distilled several key functional areas of Farmacy Family System:
 
 ![marketing_view](images/marketing_view.jpg "marketing view")
 
-Based on [primary goals](#heading=h.ny3x2fqa6o1w), [constraints](#heading=h.vp7c45p00ffx) and formalized [user stories](#heading=h.hnr67x3ca6qb), we extracted the following architecture views of Farmacy Family system design seen below. These views provide a contextual perspective of the system, showing mid-level building blocks and connectors which altogether correspond to the main capabilities provided by the Farmacy Family system.
+Based on [primary goals](#primary_goals), [constraints](#constraints) and formalized [user stories](#user_stories), we extracted the following architecture views of Farmacy Family system design seen below. These views provide a contextual perspective of the system, showing mid-level building blocks and connectors which altogether correspond to the main capabilities provided by the Farmacy Family system.
 
 ### Context <a name="target_context"></a>
 There's a context diagram that gives an overview of the external elements that interact with what we called the Farmacy Family System, which is the scope of this software architecture.
@@ -328,9 +328,9 @@ Profile Module should use Lambda and RDS for storing data.
 
 Clinics Gateway Module uses for secure communication between clinics and our system and consists of Lambda for computing, DynamoDB for storing data and also API Gateway.
 
-We have prepared a list of all the necessary [services](#heading=h.nklg55vd2y60) for your convenience.
+We have prepared a list of all the necessary [services](pages/Infrastructure_register.md) for your convenience.
 
-The [Multi-zone approach](#heading=h.q1f5im44emch) will be used to allow redundancy of critical data and high availability on the next step of the project.
+The [Multi-zone approach](pages/multizone_approach.md) will be used to allow redundancy of critical data and high availability on the next step of the project.
 
 ### Risks <a name="risks"></a>
 
@@ -348,14 +348,14 @@ These are the possible business and technical risks which we tried to highlight 
 
 #### Compliance risks
 * **CR-1:** Advice or recommendation of a nutritionist(s) can cause demonstrable damage to the health of a part of subscribers.
-* **CR-2:** Possible leakage of personal information about the client's health (see [Security](#heading=h.tl2pg3y9nhmp)).
+* **CR-2:** Possible leakage of personal information about the client's health (see [Security](#security)).
 * **CR-3:** The claim of the nutritional supplement patent holder for illegal disclosure / distribution of the recipe.
 
 #### Technical risks
-* **TR-1:** Risk of significant increase in system load during some marketing campaigns. That’s because we can’t predict the quantity of registrations. We got information during Q&As that it’s possible to join the Farmacy Family community without any purchases (see [Deployment](#heading=h.20ptiv4hg5v9) chapter).
+* **TR-1:** Risk of significant increase in system load during some marketing campaigns. That’s because we can’t predict the quantity of registrations. We got information during Q&As that it’s possible to join the Farmacy Family community without any purchases (see [Deployment](#deployment) chapter).
 * **TR-2:** It’s could be quite hard to implement new functionality into FFood mobile and web applications
 * **TR-3:** With an increase in the number of users, Community Admin will not be enough to track banned content.
-* **TR-4:** Attackers can hack our system and steal sensitive data (see [Security](#heading=h.tl2pg3y9nhmp)).
+* **TR-4:** Attackers can hack our system and steal sensitive data (see [Security](#security)).
 
 ### Security <a name="security"></a>
 
@@ -380,10 +380,10 @@ The IT infrastructure that AWS designed and managed in alignment with variety of
 We are going to regularly run tests on our own software: scan our ports, test for SQL injection, and block cross-site scripting to ensure that all our security measures are working as they should be. ([https://github.com/Netflix/SimianArmy](https://github.com/Netflix/SimianArmy))
 
 **Private subnets**
-We use private subnets for our instances to protect from being accessed directly from the internet. For more information see [Deployment](#heading=h.20ptiv4hg5v9).
+We use private subnets for our instances to protect from being accessed directly from the internet. For more information see [Deployment](#deployment).
 
 **Customer authorisation form**
-For additional information see [ADR-6](#heading=h.gd6y1zwbco5p)
+For additional information see [ADR-6: Sensitive data access](adrs/ADR-6:%20Sensitive%20data%20access.md)
 
 **Third party auditing**
 We should be regularly audited by third party penetration testers to ensure we’re meeting compliance standards. 
