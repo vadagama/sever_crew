@@ -238,7 +238,7 @@ Farmacy Family system contains of several services:
 * **Customer profile Module** - contains user sensitive personal and medical data
 * **Webinars Module** - education and online meetings
 * Artificial intelligence:
-    * **eDietician Module**
+    * **eDietician Module** - see [dataflow description](pages/edietician.md)
     * **Inventory Replenishment Module**
     * **Analysis of Service Level Module**
 

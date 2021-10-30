@@ -22,11 +22,11 @@ We see that different parts of the Farmacy Family system have different architec
 
 
 
-* The customer interacts with unified for Farmacy Food and Farmacy Family web and mobile applications also with web conferencing module UI (incorporated in main apps with APIs). These parts have to be usable and changeable to avoid customer frustration (see **QA-5** and **QA-6**).
+* The customer interacts with unified for Farmacy Food and Farmacy Family web and mobile applications also with web conferencing module UI (incorporated in main apps with APIs). These parts have to be usable and changeable to avoid customer frustration (see [QA-5](../README.md#significant_quality_attributes) and [QA-5](../README.md#significant_quality_attributes)).
 * Another significant part of our system is the Social Network Module. It contains a lot of components which should be closely related to each other and it could be hard to maintain this with a microservice approach.
-* Third part of our system is the Customer profile Module. It must be secure (see **QA-5** and **QA-6**).
-* Webinars Module should be usable and productive and we suppose not to infest in development in that case (You can read our arguments **ADR 7**)
-* And finally we need eDietician Module, Inventory Replenishment Module and Analysis of Service Level Module. These modules are based on AI mechanics and should be modifiable and secure as well (see **QA-7** and **QA-8**).
+* Third part of our system is the Customer profile Module. It must be secure (see [QA-4](../README.md#significant_quality_attributes)).
+* Webinars Module should be usable and productive and we suppose not to infest in development in that case (You can read our arguments [ADR-4: Webinars capability](ADR-4:%20webinars%20capability.md) )
+* And finally we need eDietician Module, Inventory Replenishment Module and Analysis of Service Level Module. These modules are based on AI mechanics and should be modifiable and secure as well (see [QA-10](../README.md#significant_quality_attributes) and [QA-11](../README.md#significant_quality_attributes)).
 
 This makes it clear that we need to break the monolith. The communication between these modules needs to be both synchronous and asynchronous.
 
