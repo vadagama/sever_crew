@@ -1,15 +1,15 @@
-#### ADR-5: Incorporate new functionality into Farmacy Food Mobile and Web Apps
+## ADR-5: Incorporate new functionality into Farmacy Food Mobile and Web Apps
 
-**Date**
+### Date:
 2021-10-28
 
-**Status**
+### Status:
 Proposed
 
-**Context**
+### Context:
 Based on the requirements provided by Product Owner we need to incorporate new functionality (profile, blogs, webinars, etc) into Family Food mobile and web applications. 
 
-**Decision**
+### Decision:
 Based on our assumptions about technological stack (see **ASM-6 **and** ASM-7**), we propose to refactor existing iOS and Android App and append such Farmacy Family functionality as p2p and group chats, user profile, community spaces and forums, dietitian feeds. We offer you to add only necessary functions for the mobile version and full functionality for the web version.
 
 We don't recommend to use web oriented approaches like Cordova for such mobile applications because of the following considerations:
@@ -22,5 +22,5 @@ We don't recommend to use web oriented approaches like Cordova for such mobile a
 
 According to the QA-6 we should provide architectural solutions with the ability to create flexible mobile solutions with a lot of different functionality (Including location data using GPS, camera, microphone, security options, etc). Native mobile development could provide such capability.
 
-**Consequences**
+### Consequences:
 The cost may be higher with native mobile app development approach

@@ -1,12 +1,12 @@
-#### ADR-2: Service-based architecture style approach
+## ADR-2: Service-based architecture style approach
 
-**Date**
+### Date:
 2021-10-24
 
-**Status**
+### Status:
 Proposed
 
-**Context**
+### Context:
 The current Farmacy Food system style is a modularised monolith system with all components in a single deployable service. This structure would have probably been chosen for its simplicity and cost efficiency.
 
 This monolith structure is however causing the following business impact:
@@ -17,7 +17,7 @@ This monolith structure is however causing the following business impact:
 
 We believe that the functionality of the Farmacy Family system is more fragmented, but using a microservice approach is not advisable.
 
-**Decision**
+### Decision:
 We see that different parts of the Farmacy Family system have different architectural requirements ([quality attributes](../README.md#heading=quality_attributes)).
 
 

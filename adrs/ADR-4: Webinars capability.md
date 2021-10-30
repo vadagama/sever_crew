@@ -1,12 +1,12 @@
-#### ADR-4: Webinars capability
+## ADR-4: Webinars capability
 
-**Date**
+### Date:
 2021-10-29
 
-**Status**
+### Status:
 Proposed
 
-**Context**
+### Context:
 We are convinced that developing webinars capability from scratch is not the best idea, because it is quite difficult, risky and expensive. Therefore, we offer a seamless connection of a ready-made solution to the Farmacy Family system.
 
 Choosing a proper online webinar platform is difficult sometimes as things can go wrong anytime during the webinar. Weak network, download issue, unclear audio, non-HD video, and whatnot. While selecting a webinar hosting platform, we need to make sure to consider the several aspects: 
@@ -397,12 +397,12 @@ We have reviewed several popular platforms and prepared a comparison table.
 </table>
 
 
-**Decision**
+### Decision:
 We suppose to integrate Farmacy Family with Zoom for several reasons:
 1. Very stable on all kind of devices
 2. Could integrate this several popular learning management systems (LMS) and makes it easy to schedule a meeting with any course activity and invite the right students from LMS
 3. Well documented API with a lot of capabilities for better integration
 4. Reasonable price
 
-**Consequences**
+### Consequences:
 For new users it could be quite confusing to use Zoom for the first time

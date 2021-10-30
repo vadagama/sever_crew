@@ -1,15 +1,15 @@
-#### ADR-3: Social network capabilities
+## ADR-3: Social network capabilities
 
-**Date**
+### Date:
 2021-10-28
 
-**Status**
+### Status:
 Proposed
 
-**Context**
+### Context:
 Based on the requirements provided by Product Owner we need to incorporate new functionality (profile, blogs, webinars, etc) into Family Food mobile and web applications. 
 
-**Decision**
+### Decision:
 We have analyzed several approaches durings our research:
 * Develop all functionality on a low level using popular frameworks like Django, Spring, Ruby on Rails or Laravel.
 * Integrate several different open source social tools in one holistic solution - social network platform.
@@ -50,5 +50,5 @@ We propose the [HumHub](https://www.humhub.com/en) platform because of the benef
 * Marketplace for modules and themes (most of them are free for use)
 * User-friendly interface
 
-**Consequences**
+### Consequences:
 Could be not enough flexible for our purposes
