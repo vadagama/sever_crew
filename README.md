@@ -373,7 +373,7 @@ Everything changes eventually and some things may change by taking the initiativ
 * **Business-driven change:** This covers new revenue models, competitors, new channels, changing customer needs, market regulation and product innovation, discovered by Product Owner or Analytics. These change the business requirements and use cases you are addressing with your architecture.
 * **Ecosystem change:** Some changes in programming languages, libraries, framework tools and operating environments change.
 
-We tried to follow several common characteristics of evolutionary architectures in our solution to :
+We tried to follow several common characteristics of evolutionary architectures in our solution to:
 * **Modularity and Coupling:** We tried to separate components of our system along well defined boundaries to make a non-breaking change. Of course we could decompose for example Social Network Module much deeper, but this is a Trade Off. The overall cost of development and support will be much higher. Maybe it could be reasonable on the next steps of this project.
 * **Organized Around Business Capabilities:** Farmacy Family architecture features modularity at the domain architecture level. 
 * **API:** By using API layer for interacting with the applications, various data and functionality can be easily accessed by UIs (see [API Gateway pattern](https://microservices.io/patterns/apigateway.html)). By using a unified message broker (Kafka event streaming platform) various data and functionality can be easily accessed by various services in different subdomains.
