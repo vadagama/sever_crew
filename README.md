@@ -20,6 +20,7 @@ Welcome to the Farmacy Family Architectural Kata run by [O'Reilly](https://www.o
     - [Assumptions](#assumptions)
     - [Significant Quality Attributes](#quality_attributes)
     - [Deployment](#deployment)
+    - [Supporting constant change](#evolutionary)
     - [Risks](#risks)
     - [Security](#security)
 - [Architecture design records](#adrs)
@@ -41,7 +42,7 @@ Farmacy Food is a tech-enabled healthy food startup that takes the â€œLet food b
 Founder: Kwaku Ose
 
 ## Baseline architecture <a name="baseline_architecture"></a>
-This is an actual FFood (designed by Arch Collider from the first Kata exercise - [ldynia/archcolider: O'Reilly's first Software Architectural Katas (github.com)](https://github.com/ldynia/archcolider)) system architecture. The customer interacts with Farmacy Food through well designed touch-points. 
+This is an actual Farmacy Food (designed by Arch Collider from the first Kata exercise - [ldynia/archcolider: O'Reilly's first Software Architectural Katas (github.com)](https://github.com/ldynia/archcolider) system architecture. The customer interacts with Farmacy Food through well designed touch-points. 
 
 Those are the:
 * Cross-platform web and mobile apps
@@ -65,12 +66,12 @@ When a customer of Farmacy Food purchases a meal, the Farmacy Family will involv
  
  ### Primary goals <a name="primary_goals"></a>
 The Product Owner establishes the following business goals:
-* Develop relationships between engaged customers and nurture those relationships
-* Convert transactional customers to engaged customers
-* Generate analytical data from medical information to demonstrate the benefits of Farmacy Foods
-* Engage customers with health education and marketing
-* Develop new features and loyalty programs based on community data insights
-* Increase partnership programs with clinics and dieticians
+* **GL-1:** Develop relationships between engaged customers and nurture those relationships
+* **GL-2:** Convert transactional customers to engaged customers
+* **GL-3:** Generate analytical data from medical information to demonstrate the benefits of Farmacy Foods
+* **GL-4:** Engage customers with health education and marketing
+* **GL-5:** Develop new features and loyalty programs based on community data insights
+* **GL-6:** Increase partnership programs with clinics and dieticians
 
 
 ### User requirements <a name="user_requirements"></a>
@@ -104,7 +105,7 @@ This section describes key stakeholders and their concerns:
     * Useful services for healthier and happier life  
 * **SH-2:** Farmacy Food users (transactional customers)
     * Easy onboarding process to be part of Farmacy Family
-    * No additional authentication account for login Farmacy Family services
+    * No additional authentication account for login into Farmacy Family services
 * **SH-3:** Helpdesk
     * Easy access to information about services falls, errors and exceptional situations
 * **SH-4:** Product owner
@@ -121,16 +122,16 @@ This section describes key stakeholders and their concerns:
 * **SH-7:** Clinics (Doctors)
     * Propose regular test and help for Farmacy Family clients
     * Get information about health changes after tests
-    * Support Farmacy Family client with several communication** **instruments
+    * Support Farmacy Family client with several communication instruments
 * **SH-8:** Food suppliers
     * Predict plan of purchases and delivery
 * **SH-9:** Developers
-    * Ease of developing and maintaining the system
+    * Simplify of developing and maintaining the system
 * **SH-10:** DevOPS
-    * Ease of monitoring
-    * Ease of configuration and scaling
+    * Simplify of monitoring
+    * Simplify of configuration and scaling
 * **SH-11:** Community admin
-    * Easy of managing blogs, forums, group chats, etc
+    * Simplify of managing blogs, forums, group chats, etc
 * **SH-12:** Food Supplier
 
 ### Constraints <a name="constraints"></a>
@@ -153,43 +154,42 @@ Below listed global constraints for the solution that drives all trade-off decis
 * **US-1.7:** As a Dietician I want an opportunity to review data about health status of users to make recommendations on their diets
 * **US-1.8:** As a User I need to get my medical profile from clinics without any manual operations or efforts
 * **US-1.9:** As a Doctor I want to establish wellness goals for patients to improve their level of health and wellbeing
-* **US-1.10:** As a Doctor I need full statistic about patients compliance with the goals to to evaluate their progress
+* **US-1.10:** As a Doctor I need full statistic about patients compliance with the goals to evaluate their progress
 * **US-1.11:** As a Low-income I want that medical profile should be as usable as possible for the client to answer the questions quickly and correctly
 * **US-1.12:** As a Doctor I want to manage clients goals to quickly assign goals to a patient based on a template
+* **US-1.13:** As a Clinic I want to get feedback about regular tests results and overall clients health
 
 **Social Network**
-* **US-2.1:** As a User I want to have an opportunity to join a community of like-minded people to share interesting information
+* **US-2.1:** As a User I want to have an opportunity to join a community of like-minded people to share interesting and useful information
 * **US-2.2:** As a User I need to participate in online and offline meetings to collaborate with community
 * **US-2.3:** As a User I need an opportunity to post thoughts, photos, video to share my progress and knowledge with people
 * **US-2.4:** As a User I want an opportunity for everyone in community to post some comments in my articles to to receive feedback
 * **US-2.5:** As a User I want to join communities and group chats to find out the information I'm interested in
 * **US-2.6:** As a User I want to communicate with other users with messages so that I can promptly receive information
-* **US-2.7:** As a Doctor I need blog with some recommendations so that people could get received primary information without personal consultations
-* **US-2.8:** As a Doctor I need opportunity to moderate group chats so that we could discuss common themes together
+* **US-2.7:** As a Doctor (and Dietician) I need blog functionality with some recommendations so that people could get received primary information without personal (face-to-face) consultations
+* **US-2.8:** As a Doctor (and Dietician) I need opportunity to moderate group chats so that we could discuss common themes together
 * **US-2.9:** As a User I want create and manage groups and group chats to publish content for a certain circle of people
 * **US-2.10:** As a Low-income I want to get information and participate in charity events in order to get any help
-* **US-2.11:** As a Low-income I want see minimal data in my user interface in order not to lose the necessary information
+* **US-2.11:** As a Low-income I want to see minimal data in my user interface in order not to lose the necessary information
 * **US-2.12:** As a User I want a better user interface so that i can easy find friends, posts and groups with useful information
 * **US-2.13:** As a User I need to get notifications in order to be aware of all interesting events
 * **US-2.14:** As a Doctor I want to share my docs and videos in order to organize better education and communication process
 * **US-2.15:** As a Doctor I want to have an opportunity to sell extended consultations in order to receive income from participation
 * **US-2.16:** As a User I need review of my individual set of posts in order to get relevant information
+* **US-2.17:** As a Doctor I need an intelligent chatbot so that it suggest me some recommendations based on established medical rules so that users will not receive "harmful advice"
 
 **Security**
 * **US-3.1:** As a User I want to be sure that my data is in safe and will not get to third parties
 * **US-3.2:** As a Product Owner I want to be sure that post, articles and blogs do not contain negative and illegal content in order not to cause negativity
 * **US-3.3:** As a User I want to authorise using my Farmacy Food login so that i don't need to spend time to another registration process
 * **US-3.4:** As a User I want to authorise using Facebook or Google login so that not to spend efforts to remember my Farmacy Family login and password
-* **US-3.5:** As a  Low-income I want to have an opportunity to use application in a fast manner without any authentication
-
-**Chat**
-* **US-4.1:** As a Client I want to have an intelligent chatbot so that it suggest me meals depending on preferences and create an order not to waste my time ordering manually
-* **US-4.2:** As a Doctor I need an intelligent chatbot so that it suggest me some recommendations based on established medical rules so that users will not receive "harmful advice"
+* **US-3.5:** As a  Low-income I want to have an opportunity to use application in a fast manner with simple authentication process
 
 **Webinars**
 * **US-5.1:** As a Low-Income I want to get free consultation with a doctor so that i can receive medical care
 * **US-5.2:** As a Doctor I need to have an opportunity to create webinars in order to educate Farmacy Family users
 * **US-5.3:** As a Doctor I want to conduct consultations online in order to  interact more effectively with the patient
+* **US-5.4:** As a User I want to get free or paid consultations with a doctor or a Dietician
 
 **Data analytics**
 * **US-6.1:** As a Product Owner I want there to be a collection of geography data so that they are transferred to the Farmacy Family and used to optimize deliveries to refrigerators and reduce waste
@@ -210,7 +210,7 @@ We distilled several key functional areas of Farmacy Family System:
 * Webinars for education and online meetings
 * Notifications through SMS, email and Push
 * Integration with clinics and Farmacy Food System
-* Data analysis for food and health recommendations and optimizations of logistic process
+* Data analysis for food and health recommendations and optimizations of deliveries to refrigerators and reduce waste
 * Statistics and reports
 
 ![marketing_view](images/marketing_view.jpg "marketing view")
@@ -229,26 +229,27 @@ The containers diagram shows the mid-level viewpoint of the software architectur
 
 ![target_architecture_containers](images/target_architecture_containers.jpg "target architecture containers")
 
-From the list of functional requirements and taking into account ADR, this architecture can provide all the functionality.
+From the list of functional requirements and taking into account ADR, this architecture can provide all the necessary functionality.
 
-We intentionally drew a C4 container diagram including the Farmacy Food system to show integrations with its subsystems and components which we are going to reuse in the new Farmacy Family system.
+We intentionally drew a C4 model container diagram including the Farmacy Food system to show integrations with its subsystems and components which we are going to reuse in the new Farmacy Family system.
 
 Farmacy Family system contains of several services:
-* **Web and mobile applications** - we incorporate new Farmacy Family functionality into existing Farmacy Food applications.
-* **Social Network Module** - contains blogs, forums, posts, events, chats, media, groups, subscriptions, etc
+* **Web and mobile applications** - we incorporate new Farmacy Family functionality into existing Farmacy Food applications (see [ADR-5](adrs/ADR-5:%20Incorporate%20new%20functionality%20into%20Farmacy%20Food%20Mobile%20and%20Web%20Apps.md)).
+* **Social Network Module** - contains blogs, forums, posts, events, chats, media, groups, subscriptions, etc (see [ADR-3](adrs/ADR-3:%20Social%20network%20capabilities.md))
 * **Customer profile Module** - contains user sensitive personal and medical data
-* **Webinars Module** - education and online meetings
-* Artificial intelligence:
+* **Webinars Module** - education and online meetings (see [ADR-4](adrs/ADR-4:%20Webinars%20capability.md))
+* Data analysis and recommendations Modules:
     * **eDietician Module** - see [dataflow description](pages/edietician.md)
-    * **Inventory Replenishment Module**
-    * **Analysis of Service Level Module**
+    * **Inventory Replenishment Module** - see [ADR-9](adrs/ADR-9:%20Inventory%20Replenishment%20Module.md)
+    * **Users Engagement Analysis Module** - see [ADR-11](adrs/ADR-11:%20Data%20analysis%20capability.md) Data analysis capability 
 
 We also could reuse some Farmacy Foods services:
-* **Auth Module** - authentication, authorization and Single Sign On
+* **Auth Module** - authentication, authorization and SSO (Single Sign On)
 * **Reporting Module** - generates different types of business reports
-* **Event Streaming System** - for collecting events from all modules and as an integration layer
-* **S3 Storage** - central data storage
-* **Notification Module** - for sending SMS, emails and Push notifications.
+* **Event Streaming System** - for collecting events from all modules and it uses as an integration layer between Farmacy Family compopents
+* **S3 Storage** - central data storage, which could store all the information including historical data and BLOBs
+* **Notification Module** - for sending SMS, emails and Push notifications (see [ADR-8](adrs/ADR-8:%20Notifications.md))
+* **Tracing and Monitoring Module** - for supporting infrastructure, network, and security monitoring, monitor, troubleshoot, and optimize application performance and also search, filter, and analyze our logs (see [ADR-7](adrs/ADR-7:%20Observability.md))
 
 ### Assumptions <a name="assumptions"></a>
 We define several assumptions as knowledge taken for granted or accepted as true without evidence. 
@@ -264,7 +265,7 @@ We define several assumptions as knowledge taken for granted or accepted as true
 * **ASM-10:** About 100 purchases a day
 
 And also tried to identify some metrics based on some market research:
-* 30-50 groups
+* 30-50 groups per month
 * 20-40 posts per month per user
 * 80-100 chat messages per users per day
 * 5-10 webinars per month per user
@@ -306,28 +307,36 @@ The target  architecture must support goals, user scenarios and constraints desc
 * **QA-10:** Usability
     * It is necessary to suggest a high quality user interface for webinars functionality
 
-**Artificial intelligence**
+**Data Analysis and Recommendations Modules**
 * **QA-11:** Security
     * Predictive analytics modules will operate with sensitive data. We need a high level of sensitive data security.
 * **QA-12:** Modifiability
     * We need a powerful but easy-to-use toolkit for creating and modifying ML models on-demand.
+
+We placed all identified Significant Quality Attributes on top of our container diagram during the QA workshop:
+
+![quality_attributes](images/quality_attributes.jpg "quality attributes")
 
 ### Deployment <a name="deployment"></a>
 The deployment diagram illustrates how the system containers are mapped to the AWS infrastructure:
 
 ![deployment](images/deployment.png "deployment")
 
-As stated in the Target container diagram we propose to use Managed Streaming for Apache Kafka for synchronous and asynchronous calls between our services.
+As stated in the Target container diagram we propose to use AWS Managed Streaming for Apache Kafka for synchronous and asynchronous calls between our services.
 
-We use S3 as a central datastore for assets, data for Artificial Intelligence Modules and bucket for our backups.
+We could use AWS S3 as a central datastore for assets, data for Artificial Intelligence Modules and bucketsbucket for our Farmacy Food and Farmacy Family backups.
 
-We place the Social Network Module application engine into EC2 Container and connect it to the RDS Database for storing all domain-specific information. For storing assets and user files we propose to use S3.
+We propose to use additional API layer with AWS API Gateway before Web and Mobile apps for additional security, Insulates the clients from how the application is partitioned into services, reduces the number of requests/roundtrips, etc
 
-All modules related to artificial intelligence based on serverless computing approach and requires services such as Forecast, ambda, RDS for storing relational data and AWS DynamoDB for NoSQL 
+We place the Social Network Module application engine into AWS EC2 Container and connect it to the RDS Database for storing all domain-specific information. For storing assets and user files we propose to use AWS S3 buckets.
 
-Profile Module should use Lambda and RDS for storing data.
+Inventory Replenishment Module and eDietary Module. All modules related to artificial intelligence based on serverless computing approach and requires services such as AWS Forecast, AWS Lambda, AWS RDS for storing relational data and AWS DynamoDB for NoSQL.
 
-Clinics Gateway Module uses for secure communication between clinics and our system and consists of Lambda for computing, DynamoDB for storing data and also API Gateway.
+Users Engagement Analys module requires such services as AWS Glue for ETL operations and AWS Authena for data analysis (see [ADR-11](adrs/ADR-11:%20Data%20analysis%20capability.md) Data Analysis Capability).
+
+Profile Module should use Lambda for computing and AWS RDS for storing data.
+
+Clinics Gateway Module is useduses for secure communication between clinics and Farmacy Familyour system and consists of AWS Lambda for computing, DynamoDB for storing data and also AWS API Gateway. It also requires a secure VPN connection with AWS Transit Gateway.
 
 We have prepared a list of all the necessary [services](pages/Infrastructure_register.md) for your convenience.
 
@@ -357,6 +366,22 @@ These are the possible business and technical risks which we tried to highlight 
 * **TR-2:** Itâ€™s could be quite hard to implement new functionality into FFood mobile and web applications
 * **TR-3:** With an increase in the number of users, Community Admin will not be enough to track banned content.
 * **TR-4:** Attackers can hack our system and steal sensitive data (see [Security](#security)).
+
+### Supporting constant change <a name="evolutionary"></a>
+
+Everything changes eventually and some things may change by taking the initiative as an organization, other things will have to change involuntarily. There are two kinds of change Farmacy Family will have to deal with:
+* **Business-driven change:** This covers new revenue models, competitors, new channels, changing customer needs, market regulation and product innovation, discovered by Product Owner or Analytics. These change the business requirements and use cases you are addressing with your architecture.
+* **Ecosystem change:** Some changes in programming languages, libraries, framework tools and operating environments change.
+
+We tried to follow several common characteristics of evolutionary architectures in our solution to :
+* **Modularity and Coupling:** We tried to separate components of our system along well defined boundaries to make a non-breaking change. Of course we could decompose for example Social Network Module much deeper, but this is a Trade Off. The overall cost of development and support will be much higher. Maybe it could be reasonable on the next steps of this project.
+* **Organized Around Business Capabilities:** Farmacy Family architecture features modularity at the domain architecture level. 
+* **API:** By using API layer for interacting with the applications, various data and functionality can be easily accessed by UIs (see [API Gateway pattern](https://microservices.io/patterns/apigateway.html)). By using a unified message broker (Kafka event streaming platform) various data and functionality can be easily accessed by various services in different subdomains.
+* **Cloud:** by using Amazon PaaS and SaaS solutions Farmacy Family architecture can take full advantage from typical cloud benefits like scalability, resilience and high-availability (see [ADR-10](adrs/ADR-10:%20Cloud%20provider.md) and [Deployment](#deployment)).
+* **Experimentation:** Operationally inexpensive trivial change to applications allows common Continuous Delivery practices like A/B testing, Canary Releases, and others (especially for our Data Analysis Modules and Web and Mobile Apps development).
+* **Monitoring and tracing tools:** we could track important characteristics of a system using these tools. Examples include levels of uptime, throughput, availability and security needed (see [ADR-7](adrs/ADR-7:%20Observability.md) Observability).
+
+To avoid some risks of system hacking or data theft we suggest to maintains security with the following solutions:
 
 ### Security <a name="security"></a>
 
@@ -399,6 +424,7 @@ We should be regularly audited by third party penetration testers to ensure weâ€
 - [ADR-8](adrs/ADR-8:%20Notifications.md) Notifications
 - [ADR-9](adrs/ADR-9:%20Inventory%20Replenishment%20Module.md) Inventory Replenishment Module
 - [ADR-10](adrs/ADR-10:%20Cloud%20provider.md) Cloud provider
+- [ADR-11](adrs/ADR-11:%20Data%20analysis%20capability.md) Data analysis capability
 
 # Additional resources <a name="additional_resources"></a>
 
@@ -406,11 +432,9 @@ We should be regularly audited by third party penetration testers to ensure weâ€
 We have got some additional information during our [Question and Answers](pages/question_and_answers.md)  session with the Product Owner.
 
 ### Glossary
-* **FFoods** - Farmacy Foods
-* **FFamily** - Farmacy Family
-* **Transactional Customer** - FFoods customer
-* **Engaged Customer** - customer involved in FFamily and FFoods services
-* **Support Community** - engaged members within a community of FFoods
+* **Transactional Customer** - Farmacy Foods customer
+* **Engaged Customer** - customers for whom a regular customer relationship or business relationship is not established
+* **Support Community** - engaged members within a community of Farmacy Food
 * **Community** - small group of engaged customers within a neighborhood area
 * **Ghost Kitchen** - system responsible for order execution and food refillment
 * **PoS** - point of sales

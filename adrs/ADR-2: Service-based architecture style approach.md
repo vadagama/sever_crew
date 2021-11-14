@@ -26,11 +26,11 @@ We see that different parts of the Farmacy Family system have different architec
 * Another significant part of our system is the Social Network Module. It contains a lot of components which should be closely related to each other and it could be hard to maintain this with a microservice approach.
 * Third part of our system is the Customer profile Module. It must be secure (see QA-4).
 * Webinars Module should be usable and productive and we suppose not to infest in development in that case (You can read our arguments in ADR-4: Webinars capability)
-* And finally we need eDietician Module, Inventory Replenishment Module and Analysis of Service Level Module. These modules are based on AI mechanics and should be modifiable and secure as well (see QA-10 and QA-11).
+* And finally we need eDietician Module, Inventory Replenishment Module and Users engagement analysis module. These modules are based on AI mechanics and should be modifiable and secure as well (see QA-10 and QA-11).
 
 This makes it clear that we need to break the monolith. The communication between these modules needs to be both synchronous and asynchronous.
 
-Evaluating the functional modules that need to be implemented, as well as the architectural principles that fulfil our functional and architectural requirements, we have two candidates: service based and microservice architecture.
+Evaluating the functional modules that need to be implemented, as well as the architectural principles that fulfil our functional and architectural requirements, we have two main candidates: service-based and microservice architecture.
 
 Service-based architecture give us several benefits:
 * macro-services resolves orchestration and transactional issues 
@@ -47,11 +47,13 @@ Also, there are some cons:
 * schema changes become expensive and difficult
 * decrease in overall performance
 
-This comparison is based on Neal Ford's presentation “Comparing Service Based Architectures”.
+This comparison is based on Neal Ford's presentation “Comparing Service-Based Architectures”.
 
 Microservices could add a lot of complexity than a space-based approach for development teams. Each microservice has its own API, which apps rely on to be consistent. For microservices architecture we have more pricey hosting infrastructure with security and maintenance support, and also development teams should be more skilled and expensive.
 
 We suggest choosing a good compromise between monolith and microservices: space-base architecture style with holistic UI (Web and Mobile), event-based integration approach with Kafka service and central simple object storage for both Farmacy Food and Farmacy Family systems.
+
+![architecture_style](../images/architecture_style.jpg "Service-based architecture style")
 
 **Consequences**
 * Quicker solution to compliance with our goals and requirements
