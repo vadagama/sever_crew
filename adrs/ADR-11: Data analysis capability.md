@@ -1,4 +1,4 @@
-## ADR-10: Cloud provider
+## ADR-11: Data analysis capability
 
 ### Date:
 2021-11-14
