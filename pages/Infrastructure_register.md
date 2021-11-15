@@ -29,6 +29,14 @@ The table below provides a list of infrastructure elements that are required for
    </td>
   </tr>
   <tr>
+   <td>Transit Gateway
+   </td>
+   <td>AWS
+   </td>
+   <td><a href="https://aws.amazon.com/ru/transit-gateway">Amazon Transit Gateway</a> connect Amazon VPCs, AWS accounts, and on-premises networks to a single gateway
+   </td>
+  </tr>
+  <tr>
    <td>EC2
    </td>
    <td>AWS
@@ -58,6 +66,14 @@ The table below provides a list of infrastructure elements that are required for
    <td>AWS
    </td>
    <td><a href="https://aws.amazon.com/api-gateway">Amazon Api Gateway</a> for create, maintain, and secure APIs at any scale
+   </td>
+  </tr>
+  <tr>
+   <td>CloudFront
+   </td>
+   <td>AWS
+   </td>
+   <td><a href="https://aws.amazon.com/cloudfront">Amazon CloudFront</a> securely deliver content with low latency and high transfer speeds
    </td>
   </tr>
   <tr>
@@ -93,6 +109,22 @@ The table below provides a list of infrastructure elements that are required for
    </td>
   </tr>
   <tr>
+   <td>Glue
+   </td>
+   <td>AWS
+   </td>
+   <td><a href="https://aws.amazon.com/glue/">Amazon Glue</a> - is a fully-managed, pay-as-you-go, extract, transform, and load (ETL) service that automates the time-consuming steps of data preparation for analytics.
+   </td>
+  </tr>
+  <tr>
+   <td>Athena
+   </td>
+   <td>AWS
+   </td>
+   <td><a href="https://aws.amazon.com/athena/">Amazon Athena</a> - Amazon Athena is an interactive query service that makes it easy to analyze data in Amazon S3 using standard SQL. Athena is serverless, so there is no infrastructure to manage, and you pay only for the queries that you run.
+   </td>
+  </tr>
+  <tr>
    <td>Lambda
    </td>
    <td>AWS
@@ -101,7 +133,7 @@ The table below provides a list of infrastructure elements that are required for
    </td>
   </tr>
   <tr>
-   <td>Forcast
+   <td>Forecast
    </td>
    <td>AWS
    </td>

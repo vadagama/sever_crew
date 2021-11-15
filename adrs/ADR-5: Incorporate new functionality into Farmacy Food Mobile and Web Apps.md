@@ -7,7 +7,7 @@
 Proposed
 
 ### Context:
-Based on the requirements provided by Product Owner we need to incorporate new functionality (profile, blogs, webinars, etc) into Family Food mobile and web applications. 
+Based on the constraints provided by Product Owner (CON-1 and CON-2) we need to incorporate new functionality (profile, blogs, webinars, etc) into Family Food mobile and web applications. 
 
 ### Decision:
 Based on our assumptions about technological stack (see ASM-6 and ASM-7), we propose to refactor existing iOS and Android App and append such Farmacy Family functionality as p2p and group chats, user profile, community spaces and forums, dietitian feeds. We offer you to add only necessary functions for the mobile version and full functionality for the web version.
@@ -21,6 +21,13 @@ We don't recommend to use web oriented approaches like Cordova for such mobile a
 * **Native Apps Are More Interactive And Intuitive**: native mobile apps run much smoother regarding user input and output. These types of apps inherit their devices’ OS interfaces, making them look and feel like an integrated part of the device.
 
 According to the QA-6 we should provide architectural solutions with the ability to create flexible mobile solutions with a lot of different functionality (Including location data using GPS, camera, microphone, security options, etc). Native mobile development could provide such capability.
+
+As for web development we propose to use [micro frontends](https://martinfowler.com/articles/micro-frontends.html) approach because of this benefits:
+* smaller, more cohesive and maintainable codebases
+* more scalable organisations with decoupled, autonomous teams
+* the ability to upgrade, update, or even rewrite parts of the frontend in a more incremental fashion than was previously possible
+
+
 
 ### Consequences:
 The cost may be higher with native mobile app development approach

@@ -400,7 +400,7 @@ We have reviewed several popular platforms and prepared a comparison table.
 ### Decision:
 We suppose to integrate Farmacy Family with Zoom for several reasons:
 1. Very stable on all kind of devices
-2. Could integrate this several popular learning management systems (LMS) and makes it easy to schedule a meeting with any course activity and invite the right students from LMS
+2. Could integrate this several popular learning management systems (LMS) and makes it easy to schedule a meeting with any course activity
 3. Well documented API with a lot of capabilities for better integration
 4. Reasonable price
 
