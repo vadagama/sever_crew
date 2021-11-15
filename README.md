@@ -205,7 +205,8 @@ Below listed global constraints for the solution that drives all trade-off decis
 Here you find the documentation of the software architecture that we envision to address Farmacy Family's user requirements.
 
 We distilled several key functional areas of Farmacy Family System:
-* Rich user profile 
+* Engagement of Transactional Customer using questionnaire
+* Rich user profile (including medical data)
 * Social Network with blogs, forums, posts, events, chats, media, groups, subscriptions, etc
 * Webinars for education and online meetings
 * Notifications through SMS, email and Push
@@ -250,6 +251,8 @@ We also could reuse some Farmacy Foods services:
 * **S3 Storage** - central data storage, which could store all the information including historical data and BLOBs
 * **Notification Module** - for sending SMS, emails and Push notifications (see [ADR-8](adrs/ADR-8:%20Notifications.md))
 * **Tracing and Monitoring Module** - for supporting infrastructure, network, and security monitoring, monitor, troubleshoot, and optimize application performance and also search, filter, and analyze our logs (see [ADR-7](adrs/ADR-7:%20Observability.md))
+
+These functional areas can be prioritized using a Domain Driven Design approach in order to have a good understanding of priorities and assumptions for various [subdomains](pages/subdomains.md).
 
 ### Assumptions <a name="assumptions"></a>
 We define several assumptions as knowledge taken for granted or accepted as true without evidence. 
@@ -363,7 +366,7 @@ These are the possible business and technical risks which we tried to highlight 
 
 #### Technical risks
 * **TR-1:** Risk of significant increase in system load during some marketing campaigns. That’s because we can’t predict the quantity of registrations. We got information during Q&As that it’s possible to join the Farmacy Family community without any purchases (see [Deployment](#deployment) chapter).
-* **TR-2:** It’s could be quite hard to implement new functionality into FFood mobile and web applications
+* **TR-2:** It’s could be quite hard to implement new functionality into Farmacy Food mobile and web applications
 * **TR-3:** With an increase in the number of users, Community Admin will not be enough to track banned content.
 * **TR-4:** Attackers can hack our system and steal sensitive data (see [Security](#security)).
 
@@ -373,15 +376,13 @@ Everything changes eventually and some things may change by taking the initiativ
 * **Business-driven change:** This covers new revenue models, competitors, new channels, changing customer needs, market regulation and product innovation, discovered by Product Owner or Analytics. These change the business requirements and use cases you are addressing with your architecture.
 * **Ecosystem change:** Some changes in programming languages, libraries, framework tools and operating environments change.
 
-We tried to follow several common characteristics of evolutionary architectures in our solution to:
+We tried to follow several common characteristics of evolutionary architectures in our solution:
 * **Modularity and Coupling:** We tried to separate components of our system along well defined boundaries to make a non-breaking change. Of course we could decompose for example Social Network Module much deeper, but this is a Trade Off. The overall cost of development and support will be much higher. Maybe it could be reasonable on the next steps of this project.
 * **Organized Around Business Capabilities:** Farmacy Family architecture features modularity at the domain architecture level. 
 * **API:** By using API layer for interacting with the applications, various data and functionality can be easily accessed by UIs (see [API Gateway pattern](https://microservices.io/patterns/apigateway.html)). By using a unified message broker (Kafka event streaming platform) various data and functionality can be easily accessed by various services in different subdomains.
 * **Cloud:** by using Amazon PaaS and SaaS solutions Farmacy Family architecture can take full advantage from typical cloud benefits like scalability, resilience and high-availability (see [ADR-10](adrs/ADR-10:%20Cloud%20provider.md) and [Deployment](#deployment)).
 * **Experimentation:** Operationally inexpensive trivial change to applications allows common Continuous Delivery practices like A/B testing, Canary Releases, and others (especially for our Data Analysis Modules and Web and Mobile Apps development).
 * **Monitoring and tracing tools:** we could track important characteristics of a system using these tools. Examples include levels of uptime, throughput, availability and security needed (see [ADR-7](adrs/ADR-7:%20Observability.md) Observability).
-
-To avoid some risks of system hacking or data theft we suggest to maintains security with the following solutions:
 
 ### Security <a name="security"></a>
 
@@ -420,6 +421,7 @@ We should be regularly audited by third party penetration testers to ensure we�
 - [ADR-3](adrs/ADR-3:%20Social%20network%20capabilities.md) Social network capabilities
 - [ADR-4](adrs/ADR-4:%20Webinars%20capability.md) Webinars capability
 - [ADR-5](adrs/ADR-5:%20Incorporate%20new%20functionality%20into%20Farmacy%20Food%20Mobile%20and%20Web%20Apps.md) Incorporate new functionality into Farmacy Food Mobile and Web Apps
+- [ADR-6](adrs/ADR-6:%20Sensitive%20data%20access.md) Sensitive data access
 - [ADR-7](adrs/ADR-7:%20Observability.md) Observability
 - [ADR-8](adrs/ADR-8:%20Notifications.md) Notifications
 - [ADR-9](adrs/ADR-9:%20Inventory%20Replenishment%20Module.md) Inventory Replenishment Module
