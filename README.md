@@ -267,12 +267,13 @@ We define several assumptions as knowledge taken for granted or accepted as true
 * **ASM-9:** We assume under 1000 Farmacy Food registered users
 * **ASM-10:** About 100 purchases a day
 
-And also tried to identify some metrics based on some market research:
+We described some metrics based on some market research:
 * 30-50 groups per month
 * 20-40 posts per month per user
 * 80-100 chat messages per users per day
 * 5-10 webinars per month per user
 
+We also tried to estimate the volumes of [stored and transmitted data](pages/data.md) based on the metrics described above to determine the size of the future infrastructure.
 
 ### Significant Quality Attributes <a name="quality_attributes"></a>
 The target  architecture must support goals, user scenarios and constraints described above while satisfying the quality attributes listed in this section. There are some global quality attributes and also there are several individual QAs for certain parts of the system.
