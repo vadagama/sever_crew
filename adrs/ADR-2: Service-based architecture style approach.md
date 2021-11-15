@@ -49,9 +49,9 @@ Also, there are some cons:
 
 This comparison is based on Neal Ford's presentation “Comparing Service-Based Architectures”.
 
-Microservices could add a lot of complexity than a space-based approach for development teams. Each microservice has its own API, which apps rely on to be consistent. For microservices architecture we have more pricey hosting infrastructure with security and maintenance support, and also development teams should be more skilled and expensive.
+Microservices could add a lot of complexity than a service-based approach for development teams. Each microservice has its own API, which apps rely on to be consistent. For microservices architecture we have more pricey hosting infrastructure with security and maintenance support, and also development teams should be more skilled and expensive.
 
-We suggest choosing a good compromise between monolith and microservices: space-base architecture style with holistic UI (Web and Mobile), event-based integration approach with Kafka service and central simple object storage for both Farmacy Food and Farmacy Family systems.
+We suggest choosing a good compromise between monolith and microservices: service-base architecture style with number of backend services, holistic UI (Web and Mobile), event-drived integration approach with Kafka service and central simple object storage for both Farmacy Food and Farmacy Family systems.
 
 ![architecture_style](../images/architecture_style.jpg "Service-based architecture style")
 

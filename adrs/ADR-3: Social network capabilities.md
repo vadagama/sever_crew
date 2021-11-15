@@ -7,7 +7,7 @@
 Proposed
 
 ### Context:
-Based on the requirements provided by Product Owner we need to incorporate new functionality (profile, blogs, webinars, etc) into Family Food mobile and web applications. 
+Based on the requirements provided by Product Owner we need to develop new social functionality such as groups, profiles, blogs, messages, etc. 
 
 ### Decision:
 We have analyzed several approaches durings our research:

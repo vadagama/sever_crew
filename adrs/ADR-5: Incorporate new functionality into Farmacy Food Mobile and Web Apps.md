@@ -22,5 +22,12 @@ We don't recommend to use web oriented approaches like Cordova for such mobile a
 
 According to the QA-6 we should provide architectural solutions with the ability to create flexible mobile solutions with a lot of different functionality (Including location data using GPS, camera, microphone, security options, etc). Native mobile development could provide such capability.
 
+As for web development we propose to use [micro frontends](https://martinfowler.com/articles/micro-frontends.html) approach because of this benefits:
+* smaller, more cohesive and maintainable codebases
+* more scalable organisations with decoupled, autonomous teams
+* the ability to upgrade, update, or even rewrite parts of the frontend in a more incremental fashion than was previously possible
+
+
+
 ### Consequences:
 The cost may be higher with native mobile app development approach
