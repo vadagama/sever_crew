@@ -443,6 +443,17 @@ We have got some additional information during our [Question and Answers](pages/
 * **PoS** - point of sales
 * **eDietician** - "Expert system" that will provide personalized meal recommendations
 * **HIPAA** - US Health Insurance Portability and Accountability Act
+* **API** - Application programming interface
+* **UX** - User Experience
+* **UI** - User interface
+* **CI/CD** - Continuos integration/Continuos Delivery
+* **ADR** - Architecture decision record
+* **SSO** - Single Sign On
+* **AWS** - Amazon Web Services
+* **VPN** - Virtual private network
+* **SSL** - Secure Sockets Layer
+* **SAML** - Security assertion markup language
+* **OAuth** - Open Authorization is an open standard for access delegation
 
 ### Links
 * Kata Board in Miro: [miro.com](https://miro.com/app/board/o9J_lp0sOG0=/) 
