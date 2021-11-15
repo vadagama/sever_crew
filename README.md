@@ -445,14 +445,14 @@ We have got some additional information during our [Question and Answers](pages/
 * **HIPAA** - US Health Insurance Portability and Accountability Act
 * **API** - Application programming interface
 * **UX** - User Experience
-* **UI** - User interface
-* **CI/CD** - Continuos integration/Continuos Delivery
-* **ADR** - Architecture decision record
+* **UI** - User Interface
+* **CI/CD** - Continuos Integration/Continuos Delivery
+* **ADR** - Architecture Decision Record
 * **SSO** - Single Sign On
 * **AWS** - Amazon Web Services
-* **VPN** - Virtual private network
+* **VPN** - Virtual Private Network
 * **SSL** - Secure Sockets Layer
-* **SAML** - Security assertion markup language
+* **SAML** - Security Assertion Markup Language
 * **OAuth** - Open Authorization is an open standard for access delegation
 
 ### Links
