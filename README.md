@@ -2,9 +2,11 @@
 
 Welcome to the Farmacy Family Architectural Kata run by [O'Reilly](https://www.oreilly.com/) in October - November 2021. This is an architectural documentation for the solution proposal from Sever Crew team.
 
-## Contents
+## Results
 <img align="right" width="225" height="318" src="images/medal.png">
+We became the 2nd place Winners in this competition.
 
+## Contents
 - [About the team](#about_the_team)
 - [Overview](#overview)  
 - [Baseline Architecture](#baseline_architecture)  
