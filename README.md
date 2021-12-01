@@ -456,7 +456,8 @@ We have got some additional information during our [Question and Answers](pages/
 * **OAuth** - Open Authorization is an open standard for access delegation
 
 ### Links
-* Kata Board in Miro: [miro.com](https://miro.com/app/board/o9J_lp0sOG0=/) 
+* Kata Board in Miro: [miro.com](https://miro.com/app/board/o9J_lp0sOG0=/)
+* Video presentaion: [youtube.com](https://youtu.be/NENcmM48n-M)
 * Document in PDF Format: [download](docs/farmacy_family_arch_kata.pdf) 
 * O’reilly architectural katas: [Architectural Katas](https://learning.oreilly.com/live-training/courses/architectural-katas/0636920458463/)
 * Information about ADRs: [adr.github.io](https://adr.github.io/)
