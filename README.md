@@ -3,7 +3,7 @@
 Welcome to the Farmacy Family Architectural Kata run by [O'Reilly](https://www.oreilly.com/) in October - November 2021. This is an architectural documentation for the solution proposal from Sever Crew team.
 
 ## Contents
-<img align="right" width="425" height="600" src="images/medal.png">
+<img align="right" width="225" height="318" src="images/medal.png">
 
 - [About the team](#about_the_team)
 - [Overview](#overview)  
